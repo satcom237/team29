@@ -32,7 +32,7 @@ public class Game {
     }
 
     public void dealFour() {
-        // remove the top card from the deck and add it to a column; repeat for each of the four columns
+        // remove the top card from the deck and add it to a column; repeat for each of the four columns (this is mine)
     }
 
     public void remove(int columnNumber) {
