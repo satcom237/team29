@@ -55,6 +55,10 @@ public class Game {
 
     public void move(int columnFrom, int columnTo) {
         // remove the top card from the columnFrom column, add it to the columnTo column
+        //Get the top card from the desired column then add that card to the column you want to add it to
+        addCardToCol(columnTo, getTopCard(columnFrom));
+        //Remove the card that was moved from the column that it was moved from
+        removeCardFromCol(columnFrom);
     }
 
     private void addCardToCol(int columnTo, Card cardToMove) {
