@@ -33,10 +33,29 @@ public class Game {
 
     public void shuffle() {
         // shuffles the deck so that it is random
+        // Shuffles deck using a temp class of Card object type
+        int shuffl;
+        Card temp;
+        Random r = new Random();
+        for (int i = this.deck.size() - 1; i > 0; i--){
+            shuffl = r.nextInt(i + 1); // Get random number
+            temp = this.deck.get(shuffl); // Gets random number into temp of deck
+            this.deck.set(shuffl, this.deck.get(i)); // Store initial deck as random number
+            this.deck.set(i, temp); // Put temp back into initial deck
+        }
     }
 
     public void dealFour() {
-        // remove the top card from the deck and add it to a column; repeat for each of the four columns
+        // remove the top card from the deck and add it to a column; repeat for each of the four columns (this is mine)
+        //for loop that increments through columns to add a card
+        for (int i = 0; i < 4; i++){
+
+            //adds card to the columns
+            addCardToCol(i,this.deck.get(this.deck.size()-1));
+            //remove top card from deck
+            this.deck.remove(this.deck.size()-1);
+
+        }
     }
 
     public void remove(int columnNumber) {
