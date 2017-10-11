@@ -33,6 +33,16 @@ public class Game {
 
     public void shuffle() {
         // shuffles the deck so that it is random
+        // Shuffles deck using a temp class of Card object type
+        int shuffl;
+        Card temp;
+        Random r = new Random();
+        for (int i = this.deck.size() - 1; i > 0; i--){
+            shuffl = r.nextInt(i + 1); // Get random number
+            temp = this.deck.get(shuffl); // Gets random number into temp of deck
+            this.deck.set(shuffl, this.deck.get(i)); // Store initial deck as random number
+            this.deck.set(i, temp); // Put temp back into initial deck
+        }
     }
 
     public void dealFour() {
