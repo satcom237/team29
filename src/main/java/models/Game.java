@@ -37,8 +37,13 @@ public class Game {
 
     public void dealFour() {
         // remove the top card from the deck and add it to a column; repeat for each of the four columns (this is mine)
+        //for loop that increments through columns to add a card
         for (int i = 0; i < 4; i++){
 
+            //adds card to the columns
+            addCardToCol(i,this.deck.get(this.deck.size()-1));
+            //remove top card from deck
+            this.deck.remove(this.deck.size()-1);
 
         }
     }
