@@ -1,3 +1,9 @@
+body{
+/*font-family: 'Quicksand', sans-serif;*/
+background-image: url("https://scontent-sea1-1.xx.fbcdn.net/v/t35.0-12/22851195_10210234329995189_306074939_o.jpg?oh=a48576f9e560d2d231870f951ffa06fe&oe=59F4C6B0");
+background-blend-mode: overlay;
+}
+
 tr{
 width:500px;
 }
@@ -15,4 +21,69 @@ font-weight: bold;
 .cardLocation{
 width: 100px;
 background-color:#F0F0F0;
+}
+
+#column{
+margin:auto;
+}
+
+#removeButtons{
+  display: table;/*condenses div to only be around buttons*/
+  margin: auto;
+}
+
+#Remove1{
+  position: element(#c0);
+  transform: translateY(-75%);
+  margin-right:20px;
+  margin-left: 20px;
+  background-image: url(https://static6.depositphotos.com/1007752/637/i/950/depositphotos_6376861-stock-photo-light-wood-grain-texture-natural.jpg);
+  border-color: #a26536;
+  color: #4c2110;
+  font-weight: bold;
+}
+
+#Remove2{
+  position: element(#c1);
+  transform: translateY(-75%);
+  margin-right:20px;
+  margin-left: 20px;
+  background-image: url(https://static6.depositphotos.com/1007752/637/i/950/depositphotos_6376861-stock-photo-light-wood-grain-texture-natural.jpg);
+  border-color: #a26536;
+  color: #4c2110;
+  font-weight: bold;
+}
+
+#Remove3{
+  position: element(#c2);
+  transform: translateY(-75%);
+  margin-right:20px;
+  margin-left: 20px;
+  background-image: url(https://static6.depositphotos.com/1007752/637/i/950/depositphotos_6376861-stock-photo-light-wood-grain-texture-natural.jpg);
+  border-color: #a26536;
+  color: #4c2110;
+  font-weight: bold;
+}
+
+#Remove4{
+  position: element(#c3);
+  transform: translateY(-75%);
+  margin-right:20px;
+  margin-left: 20px;
+  background-image: url(https://static6.depositphotos.com/1007752/637/i/950/depositphotos_6376861-stock-photo-light-wood-grain-texture-natural.jpg);
+  border-color: #a26536;
+  color: #4c2110;
+  font-weight: bold;
+}
+
+#dealButton{
+  background-image: url(https://i.pinimg.com/originals/70/4f/9c/704f9c7c67ecb39f6562f5d93eff699c.jpg);
+  border-color: #a26536;
+  color: #4c2110;
+  /*font-weight: bold;*/
+  position: fixed;
+  right:60px;
+  top: 100px;;
+  font-size: 4vw;
+
 }
