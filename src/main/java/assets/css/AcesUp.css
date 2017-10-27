@@ -1,3 +1,8 @@
+h1{
+color: black;
+font-size: 65px;
+}
+
 tr{
 width:500px;
 }
@@ -15,4 +20,23 @@ font-weight: bold;
 .cardLocation{
 width: 100px;
 background-color:#F0F0F0;
+}
+
+body{
+font-family: 'Quicksand', sans-serif;
+background-image: url(green_felt.jpg);
+}
+
+img{
+max-width: 510px;
+height: 110px;
+position: relative;
+right: -205px;
+top: -120px;
+}
+
+#header{
+text-align: center;
+position: relative;
+right: 50px;
 }
