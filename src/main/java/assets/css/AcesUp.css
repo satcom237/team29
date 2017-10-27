@@ -1,18 +1,28 @@
 tr{
-width:500px;
+  width:500px;
+  font-family: 'Quicksand', sans-serif;
+  background-color: wheat;
+}
+
+tr:nth-child(odd){
+  background-color: #f3cb83
 }
 
 td{
-width:100px;
-height:20px;
-text-align:center;
+  width:100px;
+  height:30px;
+  text-align:center;
 }
 
 .title{
-font-weight: bold;
+  font-weight: bold;
 }
 
 .cardLocation{
-width: 100px;
-background-color:#F0F0F0;
+  width: 100px;
+  text-decoration: underline;
+}
+
+#columns{
+  margin: auto;
 }
