@@ -1,7 +1,7 @@
 tr{
   width:500px;
   font-family: 'Quicksand', sans-serif;
-  background-color: wheat;
+  background-color: #c38750;
 }
 
 tr:nth-child(odd){
@@ -19,6 +19,7 @@ td{
 }
 #columns{
   margin:auto;
+  margin-top: 7%
 }
 .cardLocation{
 width: 100px;
