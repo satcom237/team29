@@ -1,47 +1,101 @@
-h1{
-color: black;
-font-size: 65px;
-}
 
 tr{
-width:500px;
+  width:500px;
+  font-family: 'Quicksand', sans-serif;
+  background-color: #c38750;
+}
+
+tr:nth-child(odd){
+  background-color: #f3cb83
 }
 
 td{
-width:100px;
-height:20px;
-text-align:center;
+  width:100px;
+  height:30px;
+  text-align:center;
 }
 
 .title{
-font-weight: bold;
+  font-weight: bold;
 }
-
+#columns{
+  margin:auto;
+  margin-top: 5%
+}
 .cardLocation{
 width: 100px;
-background-color:#F0F0F0;
 }
 
-<<<<<<< HEAD
-body{
-font-family: 'Quicksand', sans-serif;
-background-image: url(green_felt.jpg);
+
+#removeButtons{
+  display: table;/*condenses div to only be around buttons*/
+  margin: auto;
 }
 
-img{
-max-width: 510px;
-height: 110px;
-position: relative;
-right: -205px;
-top: -120px;
+#Remove1{
+  position: element(#c0);
+  transform: translateY(-75%);
+  margin-right:20px;
+  margin-left: 20px;
+  background-color: #f3cb83;
+  border-color: #a26536;
+  color: #4c2110;
+  font-weight: bold;
+  font-family: 'Quicksand', sans-serif;
+
 }
 
-#header{
-text-align: center;
-position: relative;
-right: 50px;
+#Remove2{
+  position: element(#c1);
+  transform: translateY(-75%);
+  margin-right:20px;
+  margin-left: 20px;
+  background-color: #f3cb83;
+  border-color: #a26536;
+  color: #4c2110;
+  font-weight: bold;
+  font-family: 'Quicksand', sans-serif;
+
 }
-=======
+
+#Remove3{
+  position: element(#c2);
+  transform: translateY(-75%);
+  margin-right:20px;
+  margin-left: 20px;
+  background-color: #f3cb83;
+  border-color: #a26536;
+  color: #4c2110;
+  font-weight: bold;
+  font-family: 'Quicksand', sans-serif;
+
+}
+
+#Remove4{
+  position: element(#c3);
+  transform: translateY(-75%);
+  margin-right:20px;
+  margin-left: 20px;
+  background-color: #f3cb83;
+  border-color: #a26536;
+  color: #4c2110;
+  font-weight: bold;
+  font-family: 'Quicksand', sans-serif;
+
+}
+
+#dealButton{
+  background-image: url(https://i.pinimg.com/originals/70/4f/9c/704f9c7c67ecb39f6562f5d93eff699c.jpg);
+  border-color: #4c2110;
+  color: #4c2110;
+  border-width: thick;
+  position: fixed;
+  left:72%;
+  top: 17%;
+  font-size: 4vw;
+  font-family: 'Quicksand', sans-serif;
+}
+
 /*START OF MOVE STYLING*/
 
 .moveBar{
@@ -143,4 +197,3 @@ right: 50px;
 }
 
 /*END OF MOVE STYLING*/
->>>>>>> master
