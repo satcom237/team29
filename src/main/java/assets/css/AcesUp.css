@@ -1,3 +1,28 @@
+h1{
+font-size: 70px;
+}
+
+body{
+font-family: 'Quicksand', sans-serif;
+background-image: url(green_felt.jpg);
+}
+
+img{
+max-width: 510px;
+height: 110px;
+position: relative;
+right: -220px;
+top: -140px;
+}
+
+#header{
+max-height: 60px;
+height: 100%;
+text-align: center;
+position: relative;
+right: 50px;
+top: 3%;
+}
 
 tr{
   width:500px;
@@ -11,7 +36,7 @@ tr:nth-child(odd){
 
 td{
   width:100px;
-  height:30px;
+  height:20px;
   text-align:center;
 }
 
