@@ -22,6 +22,7 @@ width: 100px;
 background-color:#F0F0F0;
 }
 
+<<<<<<< HEAD
 body{
 font-family: 'Quicksand', sans-serif;
 background-image: url(green_felt.jpg);
@@ -40,3 +41,106 @@ text-align: center;
 position: relative;
 right: 50px;
 }
+=======
+/*START OF MOVE STYLING*/
+
+.moveBar{
+  position:fixed;
+  left:0;
+  bottom:0;
+  width:100%;
+  height:13%;
+  background-image: url("./darkWood.jpg");
+
+}
+
+.colSelectors{
+  position: absolute;
+  left: 25%;
+  bottom: 10%;
+  display:table;
+  background-image: url("./brightWood.jpg");
+  clip-path: polygon(100% 0%, 100% 100%, 20% 100%, 10% 0%);
+  width:75%;
+  height: 80%;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.moveText1 {
+  font-family: 'Quicksand', sans-serif;
+  margin:auto;
+  color: #452113;
+  text-shadow:
+  -1px -1px 0 #a26536,
+  0px -0px 0 #a26536,
+  -1px 1px 0 #a26536,
+  0px 0px 0 #a26536;
+  font-size: 2vw;
+}
+.moveText2 {
+  font-family: 'Quicksand', sans-serif;
+  margin: auto;
+  display:inline-block;
+  color: #452113;
+  text-shadow:
+  -1px -1px 0 #a26536,
+  0px -0px 0 #a26536,
+  -1px 1px 0 #a26536,
+  0px 0px 0 #a26536;
+  font-size: 2vw;
+}
+
+#moveButton{
+  font-family: 'Quicksand', sans-serif;
+  margin:0px;
+  padding: 0px;
+  font-size: 4vw;
+  float: left;
+  position: absolute;
+  border: none;
+  left:0px;
+  bottom:10%;
+  width:35%;
+  height: 80%;
+  background-image: url("./brightWood.jpg");
+  clip-path: polygon(80% 0%, 100% 100%, 0% 100%, 0% 0%);
+  border:none;
+  color: #452113;
+  text-shadow:
+  -1px -1px 0 #a26536,
+  0px -0px 0 #a26536,
+  -1px 1px 0 #a26536,
+  0px 0px 0 #a26536;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+#moveButton:hover{
+  cursor: pointer;
+  font-size: 4.2vw;
+}
+#moveButton:active{
+  cursor: pointer;
+  font-size: 3.8vw;
+}
+
+#from_col{
+  background-image: url("./darkWood.jpg");
+  border-color: #a26536;
+  font-size: 1vw;
+  font-weight: bold;
+  text-align: center;
+  color: #a26536;
+}
+#to_col{
+  background-image: url("./darkWood.jpg");
+  border-color: #a26536;
+  font-size: 1vw;
+  font-weight: bold;
+  text-align: center;
+  color: #a26536;
+}
+
+/*END OF MOVE STYLING*/
+>>>>>>> master
