@@ -40,6 +40,7 @@ public class Game {
     }
 //////////////////////////////////
 
+
     //customDeal to setup game for testing purposes
     public void customDeal(int c1, int c2, int c3, int c4) {
         cols.get(0).add(deck.get(c1));
