@@ -41,8 +41,13 @@ public class Player {
 
     public void move(int columnFrom, int columnTo, java.util.List<java.util.List<Card>> cols) {
         Card cardToMove = getTopCard(columnFrom, cols);
-        this.removeCardFromCol(columnFrom, cols);
-        this.addCardToCol(columnTo,cardToMove, cols);
+        if((cardToMove.getValue() == 14) && !columnHasCards(columnTo, cols)){
+            System.out.print("moving card");
+            this.removeCardFromCol(columnFrom, cols);
+            this.addCardToCol(columnTo,cardToMove, cols);
+        }else{
+            System.out.print("not moving card");
+        }
     }
 
     public void addCardToCol(int columnTo, Card cardToMove, java.util.List<java.util.List<Card>> cols) {
