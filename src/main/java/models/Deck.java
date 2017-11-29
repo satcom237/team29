@@ -8,7 +8,7 @@ public class Deck {
 
     public void buildDeck(java.util.List<Card> deck, int flag) {
         if(flag == 1){
-            for (int i = 1; i < 12; i++) {
+            for (int i = 1; i < 13; i++) {
                 deck.add(new Card(i, Suit.Bastos));
                 deck.add(new Card(i, Suit.Oros));
                 deck.add(new Card(i, Suit.Copas));
