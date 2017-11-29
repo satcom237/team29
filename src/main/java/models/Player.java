@@ -19,6 +19,13 @@ public class Player {
                                 removeCard = true;
                             }
                         }
+                        //Is there a joker card in the playing field?
+                        else if (compare.getSuit() == SpanishSuit.Comodines)
+                        {
+                            removeCard = true;
+                            //Remove the joker card
+                            cols.get(i).remove(cols.get(i).size() - 1);
+                        }
                     }
                 }
             }
