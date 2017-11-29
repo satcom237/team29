@@ -121,6 +121,17 @@ width: 100px;
   font-family: 'Quicksand', sans-serif;
 }
 
+#spanishButton{
+  background-image: url(https://i.pinimg.com/originals/70/4f/9c/704f9c7c67ecb39f6562f5d93eff699c.jpg);
+  border-color: #4c2110;
+  color: #4c2110;
+  border-width: thick;
+  position: fixed;
+  right:72%;
+  top: 17%;
+  font-size: 4vw;
+  font-family: 'Quicksand', sans-serif;
+}
 /*START OF MOVE STYLING*/
 
 .moveBar{

@@ -19,6 +19,13 @@ public class Player {
                                 removeCard = true;
                             }
                         }
+                        //Is there a joker card in the playing field?
+                        else if (compare.getSuit() == Suit.Comodines)
+                        {
+                            removeCard = true;
+                            //Remove the joker card
+                            cols.get(i).remove(cols.get(i).size() - 1);
+                        }
                     }
                 }
             }
@@ -56,5 +63,18 @@ public class Player {
     public void removeCardFromCol(int colFrom, java.util.List<java.util.List<Card>> cols) {
         cols.get(colFrom).remove(cols.get(colFrom).size()-1);
     }
+
+    ///////////////////////////////
+    public void clearSpanish(java.util.List<java.util.List<Card>> cols){
+      int i = 0;
+      while(i < 4){
+      if(this.columnHasCards(i, cols)) {
+              cols.get(i).remove(cols.get(i).size() - 1);
+      }
+      else{
+        i++;
+      }
+    }
+  }
 
 }

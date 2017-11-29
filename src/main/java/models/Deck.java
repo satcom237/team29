@@ -7,7 +7,14 @@ import java.util.Random;
 public class Deck {
 
     public void buildDeck(java.util.List<Card> deck, int flag) {
+
+      System.out.println(flag);
+
         if(flag == 1){
+          while(deck.size() != 0){
+
+            deck.remove(deck.size()-1);
+          }
             for (int i = 1; i < 13; i++) {
                 deck.add(new Card(i, Suit.Bastos));
                 deck.add(new Card(i, Suit.Oros));
@@ -24,6 +31,7 @@ public class Deck {
                 deck.add(new Card(i, Suit.Diamonds));
                 deck.add(new Card(i, Suit.Spades));
             }
+
         }
     }
 
