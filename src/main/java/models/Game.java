@@ -28,25 +28,39 @@ public class Game {
     Player s = new Player();
     public void clearSpanish(){
       s.clearSpanish(this.cols);
+      flag = 1;
     }
-    Deck sd = new Deck();
+    //Deck sd = new Deck();
     //Code for calling Deck class
     Deck d = new Deck();
     Deck sd = new Deck();
 
     public void buildDeck() {
-        d.buildDeck(this.deck, flag);
         if(flag == 1){
             sd.buildDeck(this.deck, flag);
+        }
+        else{
+            d.buildDeck(this.deck, flag);
         }
     }
 
     public void shuffle() {
+      if(flag ==0){
         d.shuffle(this.deck);
+      }
+        if(flag == 1){
+            sd.shuffle(this.deck);
+        }
+
     }
 
     public void dealFour() {
+      if(flag == 0){
         d.dealFour(this.deck, this.cols);
+      }
+        if(flag == 1){
+            sd.dealFour(this.deck, this.cols);
+        }
     }
 //////////////////////////////////
 
