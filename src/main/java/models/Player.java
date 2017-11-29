@@ -64,4 +64,17 @@ public class Player {
         cols.get(colFrom).remove(cols.get(colFrom).size()-1);
     }
 
+    ///////////////////////////////
+    public void clearSpanish(java.util.List<java.util.List<Card>> cols){
+      int i = 0;
+      while(i < 4){
+      if(this.columnHasCards(i, cols)) {
+              cols.get(i).remove(cols.get(i).size() - 1);
+      }
+      else{
+        i++;
+      }
+    }
+  }
+
 }

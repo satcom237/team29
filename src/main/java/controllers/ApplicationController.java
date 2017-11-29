@@ -30,7 +30,7 @@ public class ApplicationController {
     public Result index() {
         return Results.html().template("views/AcesUp/AcesUp.flt.html");
     }
-    
+
     public Result gameGet(){
         Game g = new Game();
         g.buildDeck();
@@ -42,6 +42,16 @@ public class ApplicationController {
 
     public Result dealPost(Context context, Game g) {
         if(context.getRequestPath().contains("deal")){
+            g.dealFour();
+        }
+        return Results.json().render(g);
+    }
+
+    public Result removeSpanish(Context context, Game g) {
+        if(context.getRequestPath().contains("spanish")){
+            g.clearSpanish();
+            g.buildDeck();
+            g.shuffle();
             g.dealFour();
         }
         return Results.json().render(g);
