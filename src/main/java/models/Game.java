@@ -16,7 +16,7 @@ public class Game {
 
     public java.util.List<java.util.List<Card>> cols = new ArrayList<>();
 
-    public int flag = 1;
+    public int flag = 0;
 
     public Game() {
         cols.add(new ArrayList<Card>());
@@ -56,10 +56,10 @@ public class Game {
 
     public void dealFour() {
       if(flag == 0){
-        d.dealFour(this.deck, this.cols);
+        d.dealFour(this.deck, this.cols, flag);
       }
         if(flag == 1){
-            sd.dealFour(this.deck, this.cols);
+            sd.dealFour(this.deck, this.cols, flag);
         }
     }
 //////////////////////////////////
