@@ -56,10 +56,10 @@ public class Game {
 
     public void dealFour() {
       if(flag == 0){
-        d.dealFour(this.deck, this.cols);
+        d.dealFour(this.deck, this.cols, flag);
       }
         if(flag == 1){
-            sd.dealFour(this.deck, this.cols);
+            sd.dealFour(this.deck, this.cols, flag);
         }
     }
 //////////////////////////////////

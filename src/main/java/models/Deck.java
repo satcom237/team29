@@ -8,14 +8,14 @@ public class Deck {
 
     public void buildDeck(java.util.List<Card> deck, int flag) {
 
-      System.out.println(flag);
+        System.out.println(flag);
 
-        if(flag == 1){
-          while(deck.size() != 0){
+        if (flag == 1) {
+            while (deck.size() != 0) {
 
-            deck.remove(deck.size()-1);
-          }
-            for (int i = 1; i < 12; i++) {
+                deck.remove(deck.size() - 1);
+            }
+            for (int i = 1; i < 13; i++) {
                 deck.add(new Card(i, Suit.Bastos));
                 deck.add(new Card(i, Suit.Oros));
                 deck.add(new Card(i, Suit.Copas));
@@ -23,8 +23,7 @@ public class Deck {
             }
             deck.add(new Card(13, Suit.Comodines));
             deck.add(new Card(13, Suit.Comodines));
-        }
-        else {
+        } else {
             for (int i = 2; i < 15; i++) {
                 deck.add(new Card(i, Suit.Clubs));
                 deck.add(new Card(i, Suit.Hearts));
@@ -33,6 +32,7 @@ public class Deck {
             }
 
         }
+        System.out.println(deck.size());
     }
 
     public void shuffle(java.util.List<Card> deck) {
@@ -40,10 +40,26 @@ public class Deck {
         Collections.shuffle(deck, new Random(seed));
     }
 
-    public void dealFour(java.util.List<Card> deck, java.util.List<java.util.List<Card>> cols) {
-        for(int i = 0; i < 4; i++){
-            cols.get(i).add(deck.get(deck.size()-1));
-            deck.remove(deck.size()-1);
+    public void dealFour(java.util.List<Card> deck, java.util.List<java.util.List<Card>> cols, int flag) {
+        if (flag == 1) {
+            if (deck.size() == 2) {
+                for (int i = 0; i < 2; i++) {
+                    cols.get(i).add(deck.get(deck.size() - 1));
+                    deck.remove(deck.size() - 1);
+                }
+            }
+            else{
+                for (int i = 0; i < 4; i++) {
+                    cols.get(i).add(deck.get(deck.size() - 1));
+                    deck.remove(deck.size() - 1);
+                }
+            }
         }
+        else {
+            for (int i = 0; i < 4; i++) {
+                cols.get(i).add(deck.get(deck.size() - 1));
+                deck.remove(deck.size() - 1);
+                }
+            }
     }
 }
