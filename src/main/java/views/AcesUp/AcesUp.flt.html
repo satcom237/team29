@@ -96,6 +96,8 @@
 
 <button id="dealButton">DEAL</button>
 
+<button id="spanishButton">SPANISH</button>
+
 <div class="moveBar"><BR> <button id="moveButton">Move</button><div class="colSelectors"><div class="moveContent"></div><p class="moveText1">Move from column</p> <input type="text" id="from_col"  /> <p class="moveText2">to</p> <input type="text" id="to_col"  /></div></div> </div>
 
 
@@ -148,6 +150,18 @@ $.ajax({
 });
 });
 
+$("#spanishButton").click(function(){
+$.ajax({
+  type: "POST",
+  url: "/spanishGame",
+  data: JSON.stringify(game),
+  success: function(data, status){console.log("Data: " + data + "\nStatus: " + status);
+        game = data;
+        display(data);},
+  contentType:"application/json; charset=utf-8",
+  dataType:"json",
+});
+});
 
 function removeCard(colNumber){
 $.ajax({

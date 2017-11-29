@@ -16,7 +16,6 @@ public class Game {
 
     public java.util.List<java.util.List<Card>> cols = new ArrayList<>();
 
-
     public Game() {
         cols.add(new ArrayList<Card>());
         cols.add(new ArrayList<Card>());
@@ -24,11 +23,16 @@ public class Game {
         cols.add(new ArrayList<Card>());
     }
 
+    Player s = new Player();
+    public void clearSpanish(){
+      s.clearSpanish(this.cols);
+    }
+    Deck sd = new Deck();
     //Code for calling Deck class
     Deck d = new Deck();
 
     public void buildDeck() {
-        d.buildDeck(this.deck);
+        d.buildDeck(this.deck, flag);
     }
 
     public void shuffle() {
@@ -39,7 +43,6 @@ public class Game {
         d.dealFour(this.deck, this.cols);
     }
 //////////////////////////////////
-
 
     //customDeal to setup game for testing purposes
     public void customDeal(int c1, int c2, int c3, int c4) {
@@ -53,9 +56,12 @@ public class Game {
         deck.remove(c4);
     }
 
+
+
+
+    //s.clearSpanish();
  //This is the code for using class player
     Player p = new Player();
-
     public void remove(int columnNumber) {
         p.remove(columnNumber, this.cols);
     }
@@ -78,7 +84,6 @@ public class Game {
     }
 
     private void removeCardFromCol(int colFrom) {
-
         p.removeCardFromCol(colFrom, this.cols);
     }
     //////////////////////////////////////////////////

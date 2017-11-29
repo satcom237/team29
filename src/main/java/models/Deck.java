@@ -6,7 +6,8 @@ import java.util.Random;
 
 public class Deck {
 
-    public void buildDeck(java.util.List<Card> deck) {
+    public void buildDeck(java.util.List<Card> deck, int flag) {
+      System.out.println(flag);
         for(int i = 2; i < 15; i++){
             deck.add(new Card(i,Suit.Clubs));
             deck.add(new Card(i,Suit.Hearts));
