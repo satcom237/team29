@@ -16,6 +16,8 @@ public class Game {
 
     public java.util.List<java.util.List<Card>> cols = new ArrayList<>();
 
+    public int flag = 0;
+
     public Game() {
         cols.add(new ArrayList<Card>());
         cols.add(new ArrayList<Card>());
@@ -30,9 +32,13 @@ public class Game {
     Deck sd = new Deck();
     //Code for calling Deck class
     Deck d = new Deck();
+    Deck sd = new Deck();
 
     public void buildDeck() {
         d.buildDeck(this.deck, flag);
+        if(flag == 1){
+            sd.buildDeck(this.deck, flag);
+        }
     }
 
     public void shuffle() {
