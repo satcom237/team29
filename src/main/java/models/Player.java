@@ -20,7 +20,7 @@ public class Player {
                             }
                         }
                         //Is there a joker card in the playing field?
-                        else if (compare.getSuit() == SpanishSuit.Comodines)
+                        else if (compare.getSuit() == Suit.Comodines)
                         {
                             removeCard = true;
                             //Remove the joker card
