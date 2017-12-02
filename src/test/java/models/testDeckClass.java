@@ -12,7 +12,7 @@ public class testDeckClass {
     public void testBuildDeck(){
         Deck d = new Deck();
         java.util.List<Card> deck = new ArrayList<>();
-        d.buildDeck(deck);
+        d.buildDeck(deck,0);
         assertEquals(52, deck.size());
     }
 
@@ -24,8 +24,8 @@ public class testDeckClass {
         java.util.List<Card> deck1 = new ArrayList<>();
         java.util.List<Card> deck2 = new ArrayList<>();
         //build decks
-        d.buildDeck(deck1);
-        d.buildDeck(deck2);
+        d.buildDeck(deck1,0);
+        d.buildDeck(deck2,0);
         //shuffle decks
         d.shuffle(deck1);
         d.shuffle(deck2);
