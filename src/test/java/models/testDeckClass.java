@@ -16,6 +16,14 @@ public class testDeckClass {
         assertEquals(52, deck.size());
     }
 
+    @Test // Test for initializing Spanish Deck
+    public void testSBuildDeck(){
+        Deck sd = new Deck();
+        java.util.List<Card> deck = new ArrayList<>();
+        sd.buildDeck(deck,1);
+        assertEquals(50, deck.size());
+    }
+
     @Test
     public void testShuffle(){
         //make deck objects
