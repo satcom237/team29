@@ -55,4 +55,18 @@ public class testPlayer {
         g.customDeal(0, 1, 2, 3);
         assertEquals("2Clubs", g.p.getTopCard(0, g.cols).toString());
     }
+
+    @Test
+    public void testClearSpanish()
+    {
+        Game g = new Game();
+        g.buildDeck();
+        g.customDeal(0,1, 2,3);
+        g.p.clearSpanish(g.cols);
+        int i;
+        for(i = 0;i < 4;i++)
+        {
+            assertEquals(false, g.p.columnHasCards(i, g.cols));
+        }
+    }
 }
