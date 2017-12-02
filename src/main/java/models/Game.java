@@ -96,7 +96,7 @@ public class Game {
 
 
     public void move(int columnFrom, int columnTo) {
-        p.move(columnFrom, columnTo, this.cols);
+        p.move(columnFrom, columnTo, this.cols, flag);
     }
 
     private void addCardToCol(int columnTo, Card cardToMove) {
