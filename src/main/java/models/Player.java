@@ -46,14 +46,26 @@ public class Player {
         return cols.get(columnNumber).get(cols.get(columnNumber).size()-1);
     }
 
-    public void move(int columnFrom, int columnTo, java.util.List<java.util.List<Card>> cols) {
-        Card cardToMove = getTopCard(columnFrom, cols);
-        if((cardToMove.getValue() == 14) && !columnHasCards(columnTo, cols)){
-            System.out.print("moving card");
-            this.removeCardFromCol(columnFrom, cols);
-            this.addCardToCol(columnTo,cardToMove, cols);
-        }else{
-            System.out.print("not moving card");
+    public void move(int columnFrom, int columnTo, java.util.List<java.util.List<Card>> cols, int flag) {
+        if(flag == 0) {
+            Card cardToMove = getTopCard(columnFrom, cols);
+            if ((cardToMove.getValue() == 14) && !columnHasCards(columnTo, cols)) {
+                System.out.print("moving card");
+                this.removeCardFromCol(columnFrom, cols);
+                this.addCardToCol(columnTo, cardToMove, cols);
+            } else {
+                System.out.print("not moving card");
+            }
+        }
+        else{
+            Card cardToMove = getTopCard(columnFrom, cols);
+            if ((cardToMove.getValue() == 1) && !columnHasCards(columnTo, cols)) {
+                System.out.print("moving card");
+                this.removeCardFromCol(columnFrom, cols);
+                this.addCardToCol(columnTo, cardToMove, cols);
+            } else {
+                System.out.print("not moving card");
+            }
         }
     }
 
