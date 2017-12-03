@@ -41,6 +41,16 @@ public class testPlayer {
     }
 
     @Test
+    public void testRemoveBad()
+    {
+        Game g = new Game();
+        g.buildDeck();
+        g.customDeal(0, 1, 2, 3);
+        g.remove(1);
+        assertEquals(1, g.cols.get(0).size());
+    }
+
+    @Test
     public void testColumnhasCards(){
         Game g = new Game();
         g.buildDeck();
@@ -82,7 +92,29 @@ public class testPlayer {
         g.move(0,2);
         assertEquals(1,g.cols.get(2).size());
         assertEquals(0,g.cols.get(0).size());
+    }
 
+    @Test
+    public void testSpanishMoveBadInvalidMove()
+    {
+        Game g= new Game();
+        g.clearSpanish();
+        g.buildDeck();
+        g.customDeal(0, 1, 2, 3);
+        g.move(0, 1);
+        assertEquals(1, g.cols.get(0).size());
+        assertEquals(1, g.cols.get(1).size());
+    }
 
+    @Test
+    public void testJokerRemove()
+    {
+        Game g = new Game();
+        g.clearSpanish();
+        g.buildDeck();
+        g.customDeal(49, 1, 2, 3);
+        g.remove(1);
+        assertEquals(0, g.cols.get(0).size());
+        assertEquals(0, g.cols.get(1).size());
     }
 }
