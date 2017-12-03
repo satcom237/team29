@@ -69,4 +69,20 @@ public class testPlayer {
             assertEquals(false, g.p.columnHasCards(i, g.cols));
         }
     }
+
+    @Test
+    public void testSpanishMove(){
+
+        Game g = new Game();
+        g.clearSpanish();
+        g.buildDeck();
+        g.customDeal(0,3,6,9);
+        g.remove(2);
+        assertEquals(0,g.cols.get(2).size());
+        g.move(0,2);
+        assertEquals(1,g.cols.get(2).size());
+        assertEquals(0,g.cols.get(0).size());
+
+
+    }
 }
